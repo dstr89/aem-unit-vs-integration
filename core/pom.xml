@@ -191,5 +191,10 @@ Import-Package: javax.annotation;version=0.0.0,*
             <artifactId>io.wcm.testing.aem-mock.junit5</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.util.tracker</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>

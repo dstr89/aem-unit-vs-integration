@@ -1,0 +1,89 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Sun Jun 14 2020 11:22:30 GMT+0200",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "jcr:title": "Climbing",
+    "cq:template": "/conf/demo-site/settings/wcm/templates/page-content",
+    "jcr:created": "Sun Jun 14 2020 11:22:30 GMT+0200",
+    "cq:lastModified": "Sat Jun 13 2020 17:14:08 GMT+0200",
+    "sling:resourceType": "demo-site/components/page",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "demo-site/components/container",
+      "container": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "demo-site/components/container",
+        "title": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "demo-site/components/title"
+        },
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "layout": "responsiveGrid",
+          "sling:resourceType": "demo-site/components/container",
+          "text": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Sat Jun 13 2020 17:11:48 GMT+0200",
+            "text": "<p>Climbing is the activity of using one's hands, feet, or any other part of the body to ascend a steep topographical object. It is done for locomotion, recreation and competition, and within trades that rely on ascension; such as emergency rescue and military operations. It is done indoors and out, on natural and man-made structures.</p>\n<p>Professional mountain guides or rock climbing guides, such as members of the IFMGA, have been known to be a historically significant element of developing the popularity of the sport in the natural environment, and remain so today.</p>\n<p>Climbing will be an official sport for the first time in the Olympic Games in 2021. It has been delayed due to the COVID-19 pandemic.[1] It takes place in Tokyo (see Sport climbing at the 2020 Summer Olympics).</p>\n",
+            "jcr:lastModified": "Sat Jun 13 2020 17:12:10 GMT+0200",
+            "sling:resourceType": "demo-site/components/text",
+            "textIsRich": "true"
+          },
+          "image": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "fileReference": "/content/dam/demo-site/climbing.jpg",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Sat Jun 13 2020 17:12:14 GMT+0200",
+            "jcr:lastModified": "Sat Jun 13 2020 17:12:19 GMT+0200",
+            "sling:resourceType": "demo-site/components/image"
+          },
+          "title": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Types",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Sat Jun 13 2020 17:12:40 GMT+0200",
+            "jcr:lastModified": "Sat Jun 13 2020 17:13:12 GMT+0200",
+            "sling:resourceType": "demo-site/components/title"
+          },
+          "text_248256159": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Sat Jun 13 2020 17:12:45 GMT+0200",
+            "text": "<p>Climbing activities include:</p>\n<ul>\n<li>Bouldering: Ascending boulders or small outcrops, often with climbing shoes and a chalk bag or bucket. Usually, instead of using a safety rope from above, injury is avoided using a crash pad and a human spotter (to direct a falling climber on to the pad. They can also give beta, or advice)[3]</li>\n<li>Buildering: Ascending the exterior skeletons of buildings, typically without protective equipment.</li>\n<li>Canyoneering: Climbing along canyons for sport or recreation.</li>\n<li>Chalk climbing: Ascending chalk cliffs uses some of the same techniques as ice climbing.</li>\n<li>Competition climbing: A formal, competitive sport of recent origins, normally practiced on artificial walls that resemble natural formations. The International Federation of Sport Climbing (IFSC) is the official organization governing competition rock climbing worldwide and is recognized by the IOC and GAISF and is a member of the International World Games Association (IWGA). The UIAA is the official organization governing competition ice climbing worldwide. Competition climbing has three major disciplines: Lead, Bouldering and Speed.</li>\n<li>Free climbing: a form of rock climbing in which the climber uses climbing equipment such as ropes and other means of climbing protection, but only to protect against injury during falls and not to assist progress.[4]</li>\n<li>Ice climbing: Ascending ice or hard snow formations using special equipment, usually ice axes and crampons. Techniques of protecting the climber are similar to those of rock climbing, with protective devices (such as ice screws and snow wedges) adapted to frozen conditions.</li>\n<li>Indoor climbing: Top roping, lead climbing, and bouldering artificial walls with bolted holds in a climbing gym.</li>\n<li>Ladder climbing: Climbing ladders for exercise. This may involve climbing up and down the underside of a ladder, or along a horizontally aligned ladder or 'monkey bars'. The ladder may be climbed going forwards, backwards, or sideways.</li>\n<li>Lumberjack tree-trimming and competitive tree-trunk or pole climbing for speed using spikes and belts.</li>\n<li>Mallakhamba: A traditional Indian sport which combines climbing a pole or rope with the performance of aerial yoga and gymnastics.</li>\n<li>Mountaineering: Ascending mountains for sport or recreation. It often involves rock or ice climbing (Alpine climbing).</li>\n<li>Pole climbing: Climbing poles and masts without equipment.</li>\n<li>Rock climbing: Ascending rock formations, often using climbing shoes and a chalk bag. Equipment such as ropes, bolts, nuts, hexes and camming devices are normally employed, either as a safeguard or for artificial aid.</li>\n<li>Rope access: Industrial climbing, usually abseiling, as an alternative to scaffolding for short works on exposed structures.</li>\n<li>Rope climbing: Climbing a short, thick rope for speed. Not to be confused with roped climbing, as in rock or ice climbing.</li>\n<li>Scrambling: The art of ascending rocky faces and ridges, which can include rock climbing, and is considered part of hillwalking although can require the use of ropes and other climbing equipment based on the difficulty of the terrain][5].</li>\n<li>Stair Climbing ascending elevation via stairs.</li>\n<li>Sport climbing is a form of rock climbing that relies on permanent anchors fixed to the rock, and possibly bolts, for protection, (in contrast with traditional climbing, where the rock is typically devoid of fixed anchors and bolts, and where climbers must place removable protection as they climb).[3]</li>\n<li>Top roping: Ascending a rock climbing route protected by a rope anchored at the top and protected by a belayer below[6]</li>\n<li>Traditional climbing (more casually known as Trad climbing) is a form of climbing without fixed anchors and bolts. Climbers place removable protection such as camming devices, nuts, and other passive and active protection that holds the rope to the rock (via the use of carabiners and webbing/slings) in the event of a fall or when weighted by a climber.</li>\n<li>Tower climbing: Climbing up the inside of a narrow tower by applying pressure to the walls with the hands and feet.</li>\n<li>Solo climbing: Solo climbing or soloing is a style of climbing in which the climber climbs alone, without somebody belaying them. When free soloing, an error usually is fatal as no belay systems are being used. Soloing can also be self-belayed, hence minimizing the risks.[7]</li>\n<li>Tree climbing: Recreationally ascending trees using ropes and other protective equipment.</li>\n<li>A tower climber is a professional who climbs broadcasting or telecommunication towers or masts for maintenance or repair.</li>\n</ul>\n",
+            "jcr:lastModified": "Sat Jun 13 2020 17:13:56 GMT+0200",
+            "sling:resourceType": "demo-site/components/text",
+            "textIsRich": "true"
+          },
+          "title_307778961": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Film",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Sat Jun 13 2020 17:12:42 GMT+0200",
+            "jcr:lastModified": "Sat Jun 13 2020 17:14:08 GMT+0200",
+            "sling:resourceType": "demo-site/components/title"
+          },
+          "text_754030682": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Sat Jun 13 2020 17:12:47 GMT+0200",
+            "text": "<p>Climbing has been the subject of both film and documentary film with notable examples being Touching the Void, Everest and Free Solo.</p>\n",
+            "jcr:lastModified": "Sat Jun 13 2020 17:14:04 GMT+0200",
+            "sling:resourceType": "demo-site/components/text",
+            "textIsRich": "true"
+          }
+        }
+      }
+    }
+  }
+}
