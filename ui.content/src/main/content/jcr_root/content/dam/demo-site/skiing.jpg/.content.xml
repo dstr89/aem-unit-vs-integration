@@ -2,41 +2,40 @@
 <jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:mixinTypes="[mix:referenceable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="37cbf0d6-c86e-4bc3-921e-a1e4c8e1c0dc">
+    jcr:uuid="f1b0907a-d854-4ed6-b256-1d7d168e3beb">
     <jcr:content
         dam:assetState="processed"
-        jcr:lastModified="{Date}2020-06-13T17:00:12.501+02:00"
+        jcr:lastModified="{Date}2020-06-14T11:10:11.946+02:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
-            dam:Bitsperpixel="{Long}32"
-            dam:Comments="Software: PhotoScape&#xa;"
-            dam:extracted="{Date}2020-06-13T17:00:11.824+02:00"
-            dam:Fileformat="PNG"
-            dam:MIMEtype="image/png"
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2020-06-14T11:10:10.915+02:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
-            dam:Numberoftextualcomments="{Long}1"
-            dam:Physicalheightindpi="{Long}96"
-            dam:Physicalheightininches="{Decimal}4.854844093322754"
-            dam:Physicalwidthindpi="{Long}96"
-            dam:Physicalwidthininches="{Decimal}9.39714527130127"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
             dam:Progressive="no"
-            dam:sha1="86cfdbcdbbe6c01db221ececb12f608e93d60659"
-            dam:size="{Long}894818"
-            dc:format="image/png"
+            dam:sha1="1aeacc0be8f6c1677654dd85fdc99d299f150343"
+            dam:size="{Long}233603"
+            dc:format="image/jpeg"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
-            tiff:ImageLength="{Long}466"
-            tiff:ImageWidth="{Long}902"/>
+            tiff:ImageLength="{Long}1080"
+            tiff:ImageWidth="{Long}1920"/>
         <related jcr:primaryType="nt:unstructured"/>
         <usages
-            dam:score="{Long}2"
+            dam:score="{Long}1"
             jcr:primaryType="nt:unstructured"
             usedBy="[aem]">
             <aem
                 jcr:primaryType="nt:unstructured"
-                count="{Long}2"
-                lastUsed="{Date}2020-06-13T17:11:03.575+02:00"/>
+                count="{Long}1"
+                lastUsed="{Date}2020-06-14T11:12:41.292+02:00"/>
         </usages>
     </jcr:content>
 </jcr:root>

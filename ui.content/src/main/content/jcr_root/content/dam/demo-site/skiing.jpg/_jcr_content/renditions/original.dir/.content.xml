@@ -3,6 +3,6 @@
     jcr:primaryType="nt:file">
     <jcr:content
         jcr:lastModifiedBy="admin"
-        jcr:mimeType="image/png"
+        jcr:mimeType="image/jpeg"
         jcr:primaryType="oak:Resource"/>
 </jcr:root>

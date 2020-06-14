@@ -1,65 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:Iptc4xmpCore="http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:mixinTypes="[mix:referenceable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="f03d65a6-9874-4c1b-984c-5def0c2e66b8">
+    jcr:uuid="1a1762df-2b16-4b1d-bff3-7c996664c4d2">
     <jcr:content
         dam:assetState="processed"
-        jcr:lastModified="{Date}2020-06-13T17:00:12.473+02:00"
+        jcr:lastModified="{Date}2020-06-14T11:10:11.959+02:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
-            dam:extracted="{Date}2020-06-13T17:00:11.824+02:00"
+            dam:Comments="CREATOR: gd-jpeg v1.0 (using IJG JPEG v80), quality = 97&#xa;&#xa;"
+            dam:extracted="{Date}2020-06-14T11:10:10.915+02:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
-            dam:Numberoftextualcomments="{Long}0"
+            dam:Numberoftextualcomments="{Long}1"
             dam:Physicalheightindpi="{Long}-1"
             dam:Physicalheightininches="{Decimal}-1.0"
             dam:Physicalwidthindpi="{Long}-1"
             dam:Physicalwidthininches="{Decimal}-1.0"
             dam:Progressive="no"
-            dam:sha1="5cbd41a0f4dbd9cfa8b6314a4b263c7e5861f5aa"
-            dam:size="{Long}653434"
-            dc:creator="[TomServais]"
-            dc:creator_xmpArrayType="rdf:Seq"
+            dam:sha1="1947c6164a93dc5d137fd99e85c983612381d344"
+            dam:size="{Long}558135"
             dc:format="image/jpeg"
-            dc:rights="©tomservais"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
-            tiff:ImageLength="{Long}1559"
-            tiff:ImageWidth="{Long}3231"
-            xmp:CreatorTool="Adobe Photoshop Camera Raw 9.1.1 (Macintosh)"
-            xmpMM:DocumentID="xmp.did:D204D9BA9B6D11E98D61C3C6D67BAED9"
-            xmpMM:InstanceID="xmp.iid:D204D9B99B6D11E98D61C3C6D67BAED9"
-            xmpRights:Marked="{Boolean}true">
-            <xmpMM:DerivedFrom
-                jcr:primaryType="nt:unstructured"
-                stRef:documentID="ECCC981B720FE6CE872A93CB9F6BBAF0"
-                stRef:instanceID="ECCC981B720FE6CE872A93CB9F6BBAF0"
-                xmpNodeType="xmpStruct"/>
-            <Iptc4xmpCore:CreatorContactInfo
-                Iptc4xmpCore:CiAdrCity="CAPISTRANO BEACH"
-                Iptc4xmpCore:CiAdrCtry="USA"
-                Iptc4xmpCore:CiAdrExtadr="PO BOX 2907"
-                Iptc4xmpCore:CiAdrPcode="92629"
-                Iptc4xmpCore:CiAdrRegion="CALIFORNIA"
-                Iptc4xmpCore:CiEmailWork="tomservais@earthlink.net"
-                Iptc4xmpCore:CiTelWork="1-949-212-7191"
-                Iptc4xmpCore:CiUrlWork="tomservais.com"
-                jcr:primaryType="nt:unstructured"
-                xmpNodeType="xmpStruct"/>
-        </metadata>
+            tiff:ImageLength="{Long}1080"
+            tiff:ImageWidth="{Long}1920"/>
         <related jcr:primaryType="nt:unstructured"/>
-        <usages
-            dam:score="{Long}1"
-            jcr:primaryType="nt:unstructured"
-            usedBy="[aem]">
-            <aem
-                jcr:primaryType="nt:unstructured"
-                count="{Long}1"
-                lastUsed="{Date}2020-06-13T17:14:49.661+02:00"/>
-        </usages>
     </jcr:content>
 </jcr:root>

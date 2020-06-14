@@ -1,0 +1,15 @@
+<sly data-sly-use.articlesListModel="hr.dstr89.demo.core.models.ArticleListModel"></sly>
+
+<div class="aem-Grid aem-Grid--12" data-sly-list.article="${articlesListModel.articles}">
+    <div class="aem-GridColumn aem-GridColumn--phone--12 aem-GridColumn--tablet--6 aem-GridColumn--default--4">
+        <sly data-sly-call="${articleItem @ articleItem=article}"></sly>
+    </div>
+</div>
+
+<template data-sly-template.articleItem="${@  articleItem}">
+    <img src="${articleItem.image}" style="width:100%" alt="Article image">
+    <div>
+        <a href="${articleItem.url}"><h4><b>${articleItem.title}</b></h4></a>
+        <p>${articleItem.description}</p>
+    </div>
+</template>

@@ -32,9 +32,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * Simple JUnit test verifying the HelloWorldModel
  */
 @ExtendWith(AemContextExtension.class)
-class HelloWorldModelTest {
+class ArticleListModelTest {
 
-    private HelloWorldModel hello;
+    private ArticleListModel hello;
 
     private Page page;
     private Resource resource;
@@ -48,16 +48,12 @@ class HelloWorldModelTest {
             "sling:resourceType", "demo-site/components/helloworld");
 
         // create sling model
-        hello = resource.adaptTo(HelloWorldModel.class);
+        hello = resource.adaptTo(ArticleListModel.class);
     }
 
     @Test
     void testGetMessage() throws Exception {
-        // some very basic junit tests
-        String msg = hello.getMessage();
-        assertNotNull(msg);
-        assertTrue(StringUtils.contains(msg, resource.getResourceType()));
-        assertTrue(StringUtils.contains(msg, page.getPath()));
+
     }
 
 }

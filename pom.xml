@@ -250,6 +250,7 @@ Bundle-DocURL:
                     <artifactId>filevault-package-maven-plugin</artifactId>
                     <version>1.0.3</version>
                     <configuration>
+                        <allowIndexDefinitions>true</allowIndexDefinitions>
                         <filterSource>src/main/content/META-INF/vault/filter.xml</filterSource>
                     </configuration>
                 </plugin>
@@ -688,7 +689,34 @@ Bundle-DocURL:
                 <type>zip</type>
                 <version>${core.wcm.components.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.10</version>
+                <scope>provided</scope>
+            </dependency>
 
+            <!-- ACS commons -->
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-bundle</artifactId>
+                <version>4.7.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-ui.content</artifactId>
+                <version>4.7.0</version>
+                <type>zip</type>
+                <classifier>min</classifier>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-ui.apps</artifactId>
+                <version>4.7.0</version>
+                <type>zip</type>
+                <classifier>min</classifier>
+            </dependency>
 
             <!-- Testing -->
             <dependency>

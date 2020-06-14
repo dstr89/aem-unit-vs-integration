@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2020-06-13T17:11:07.585+02:00"
+        cq:lastModified="{Date}2020-06-14T11:12:41.176+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/demo-site/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
@@ -33,11 +33,11 @@
                     <image
                         jcr:created="{Date}2020-06-13T17:11:01.073+02:00"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2020-06-13T17:11:03.466+02:00"
+                        jcr:lastModified="{Date}2020-06-14T11:12:41.173+02:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="demo-site/components/image"
-                        fileReference="/content/dam/demo-site/skiing.png"/>
+                        fileReference="/content/dam/demo-site/skiing.jpg"/>
                     <title
                         jcr:created="{Date}2020-06-13T17:09:17.434+02:00"
                         jcr:createdBy="admin"
