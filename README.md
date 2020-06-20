@@ -1,21 +1,53 @@
-# Run
+# AEM: Unit vs Integration testing
 
-mvn -s /Users/hrzz003c/.m2/settings_adobe.xml clean install -PautoInstallPackage
+## About
 
-# Sample AEM project template
+This is an example AEM project demonstrating how to make use of JUnit, AEM Mocks and Mockito for writing integration tests.
+Instead of writing separate unit tests for each class, in this approach we focus on testing the expected functionality gained from integrating those classes.
+We step away from the unit/code level testing and focus our test on what the end user is actually expecting as the output (acceptance criteria).
 
-This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
+## Use case
+
+In this example we implemented a component called "Article list" that fetches and displays information from its child pages.
+
+We could define acceptance criteria for the components as following:
+* Once added to a home page, the component automatically fetches all child article pages
+* For every fetched article, the component displays
+    * Title linking to the article page (on publisher)
+    * Thumbnail of the first images used in the article (319x319 px)
+    * Description consisting of the article text (up to 250 characters followed by three dots)   
+
+## Implementation
+
+To conform to best practices, we implemented a Sling model for the component `ArticleListModel.java`, but separated all the business logic into dedicated OSGi service.
+Thus `LinkService`, `ImageFinderService` and `TextExcerptsService` are all small services with single responsibility, that could be easily reused for other use cases in the future.
+
+## Testing
+
+When writing an integration test we focus on the end result (output) and not on internal implementation. In case of an AEM component, the class outputting results to HTML is our Sling Model.
+That means we only need to test the `ArticleListModel.java` class, but use real implementations of all internal services, so those get tested as well.
+It is important to note that in `ArticleListModelTest.java` we mock all AEM internal services like `SlingSettingsService`, `Externalizer` and `XSSAPI`, but use real implementation for all custom services like `LinkService`, `ImageFinderService` and `TextExcerptsService`.
+
+Next, we load the sample content from JSON files and write a single integration test that will completely cover our: model, custom services and the defined acceptance criteria:
+* GIVEN that two articles are present in the content under the home page
+* WHEN article list component model is adapted from the home page
+* THEN the model returns two articles with their corresponding title, description, URL and image
+
+## Coverage
+
+The one integration test we wrote for this use case achieved code coverage of 95%, measured by jacoco plugin. Coverage report can be reached at:
+
+    core/target/site/jacoco/index.html
+    
+Of course, additional unit test could be written for individual services to cover them even better. Decide for yourself if it makes sense in a particular case or not.
 
 ## Modules
 
-The main parts of the template are:
+The main project modules are:
 
 * core: Java bundle containing all core functionality like OSGi services, listeners or schedulers, as well as component-related Java code such as servlets or request filters.
-* ui.apps: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, templates, runmode specific configs as well as Hobbes-tests
+* ui.apps: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, templates, runmode specific configs
 * ui.content: contains sample content using the components from the ui.apps
-* ui.tests: Java bundle containing JUnit tests that are executed server-side. This bundle is not to be deployed onto production.
-* ui.launcher: contains glue code that deploys the ui.tests bundle (and dependent bundles) to the server and triggers the remote JUnit execution
-* ui.frontend: an optional dedicated front-end build mechanism (Angular, React or general Webpack project)
 
 ## How to build
 
@@ -39,36 +71,12 @@ Or to deploy only the bundle to the author, run
 
     mvn clean install -PautoInstallBundle
 
-## Testing
-
-There are three levels of testing contained in the project:
-
-* unit test in core: this show-cases classic unit testing of the code contained in the bundle. To test, execute:
-
-    mvn clean test
-
-* server-side integration tests: this allows to run unit-like tests in the AEM-environment, ie on the AEM server. To test, execute:
-
-    mvn clean verify -PintegrationTests
-
-* client-side Hobbes.js tests: JavaScript-based browser-side tests that verify browser-side behavior. To test:
-
-    in the browser, open the page in 'Developer mode', open the left panel and switch to the 'Tests' tab and find the generated 'MyName Tests' and run them.
-
-## ClientLibs
-
-The frontend module is made available using an [AEM ClientLib](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html). When executing the NPM build script, the app is built and the [`aem-clientlib-generator`](https://github.com/wcm-io-frontend/aem-clientlib-generator) package takes the resulting build output and transforms it into such a ClientLib.
-
-A ClientLib will consist of the following files and directories:
-
-- `css/`: CSS files which can be requested in the HTML
-- `css.txt` (tells AEM the order and names of files in `css/` so they can be merged)
-- `js/`: JavaScript files which can be requested in the HTML
-- `js.txt` (tells AEM the order and names of files in `js/` so they can be merged
-- `resources/`: Source maps, non-entrypoint code chunks (resulting from code splitting), static assets (e.g. icons), etc.
-
 ## Maven settings
 
 The project comes with the auto-public repository configured. To setup the repository in your Maven settings, refer to:
 
     http://helpx.adobe.com/experience-manager/kb/SetUpTheAdobeMavenRepository.html
+
+When building the project you can point to a specific Maven setting file to use like this:
+    
+    mvn -s /Users/hrzz003c/.m2/settings_adobe.xml clean install -PautoInstallPackage

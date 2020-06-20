@@ -52,17 +52,16 @@ public class ArticleListModel {
     @PostConstruct
     public void init() {
         try {
-            final List<Page> childPages = IteratorUtils.toList(this.currentPage.listChildren());
-            this.articles = IntStream
-                              .range(0, childPages.size())
-                              .mapToObj(index -> this.createArticleItem(childPages.get(index), index))
-                              .collect(Collectors.toList());
+            this.articles = IteratorUtils.toList(this.currentPage.listChildren())
+                                         .stream()
+                                         .map(this::createArticleItem)
+                                         .collect(Collectors.toList());
         } catch (final Exception e) {
             log.error("Exception in post construct", e);
         }
     }
 
-    private ArticleItem createArticleItem(final Page articlePage, final int index) {
+    private ArticleItem createArticleItem(final Page articlePage) {
         final String title = articlePage.getTitle();
         final String image = this.imageFinderService.getFirstImagePath(IMAGE_THUMBNAIL_RENDITION_SUFFIX, articlePage);
         final String description = this.textExcerptsService.getTextExcerpts(articlePage, ARTICLE_DESCRIPTION_LENGTH);
