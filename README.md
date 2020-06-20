@@ -8,7 +8,7 @@ We step away from the unit/code level testing and focus our test on what the end
 
 ## Use case
 
-In this example we implemented a component called "Article list" that fetches and displays information from its child pages.
+In this example we implemented a component called _Article list_ that fetches and displays information from its child pages.
 
 We could define acceptance criteria for the components as following:
 * Once added to a home page, the component automatically fetches all child article pages
@@ -25,21 +25,22 @@ Thus `LinkService`, `ImageFinderService` and `TextExcerptsService` are all small
 ## Testing
 
 When writing an integration test we focus on the end result (output) and not on internal implementation. In case of an AEM component, the class outputting results to HTML is our Sling Model.
-That means we only need to test the `ArticleListModel.java` class, but use real implementations of all internal services, so those get tested as well.
+That means we only need to test the `ArticleListModel.java` class. However, in our test we will use real implementations of all internal services, so they get tested as well.
 It is important to note that in `ArticleListModelTest.java` we mock all AEM internal services like `SlingSettingsService`, `Externalizer` and `XSSAPI`, but use real implementation for all custom services like `LinkService`, `ImageFinderService` and `TextExcerptsService`.
 
-Next, we load the sample content from JSON files and write a single integration test that will completely cover our: model, custom services and the defined acceptance criteria:
+Next, we load the sample content from JSON files and write a single integration test that will cover our model, services and the defined acceptance criteria:
 * GIVEN that two articles are present in the content under the home page
 * WHEN article list component model is adapted from the home page
 * THEN the model returns two articles with their corresponding title, description, URL and image
 
 ## Coverage
 
-The one integration test we wrote for this use case achieved code coverage of 95%, measured by jacoco plugin. Coverage report can be reached at:
+The 20 LOC we wrote for the integration test achieved code coverage of 95%, measured by jacoco plugin. Coverage report can be reached at:
 
     core/target/site/jacoco/index.html
     
-Of course, additional unit test could be written for individual services to cover them even better. Decide for yourself if it makes sense in a particular case or not.
+Of course, additional unit test could be written for individual services to cover them even better. 
+Decide for yourself if that makes sense in a particular case or not.
 
 ## Modules
 
