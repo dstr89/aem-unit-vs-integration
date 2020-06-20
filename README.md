@@ -78,6 +78,6 @@ The project comes with the auto-public repository configured. To setup the repos
 
     http://helpx.adobe.com/experience-manager/kb/SetUpTheAdobeMavenRepository.html
 
-When building the project you can point to a specific Maven setting file to use like this:
+When building the project you can point to a specific Maven settings file to use like this:
     
     mvn -s /Users/hrzz003c/.m2/settings_adobe.xml clean install -PautoInstallPackage
