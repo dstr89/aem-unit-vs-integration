@@ -1,4 +1,4 @@
-# AEM: Unit vs Integration testing
+# AEM: Unit vs Integration Testing
 
 ## About
 
