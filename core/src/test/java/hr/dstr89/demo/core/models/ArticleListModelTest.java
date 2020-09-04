@@ -6,7 +6,9 @@ import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.settings.SlingSettingsService;
+import org.apache.sling.testing.mock.sling.MockXSSAPIImpl;
 import org.apache.sling.testing.mock.sling.ResourceResolverType;
+import org.apache.sling.testing.mock.sling.services.MockSlingSettingService;
 import org.apache.sling.xss.XSSAPI;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -18,8 +20,6 @@ import com.day.cq.commons.Externalizer;
 
 import hr.dstr89.demo.core.data.ArticleItem;
 import hr.dstr89.demo.core.mocks.MockExternalizer;
-import hr.dstr89.demo.core.mocks.MockSlingSettingsService;
-import hr.dstr89.demo.core.mocks.MockXSSAPI;
 import hr.dstr89.demo.core.services.ImageFinderService;
 import hr.dstr89.demo.core.services.TextExcerptsService;
 import hr.dstr89.demo.core.services.impl.ImageFinderServiceImpl;
@@ -42,9 +42,9 @@ class ArticleListModelTest {
     @BeforeEach
     void setupContextAndAdaptModel() {
         // Register mocked AEM services required by the custom services under test
-        this.context.registerService(SlingSettingsService.class, new MockSlingSettingsService(), new HashMap<>());
+        this.context.registerService(SlingSettingsService.class, new MockSlingSettingService(), new HashMap<>());
         this.context.registerService(Externalizer.class, new MockExternalizer(), new HashMap<>());
-        this.context.registerService(XSSAPI.class, new MockXSSAPI(), new HashMap<>());
+        this.context.registerService(XSSAPI.class, new MockXSSAPIImpl(), new HashMap<>());
 
         // Register ASC commons AemObject injector
         this.context.registerInjectActivateService(new AemObjectInjector(), new HashMap<>());
@@ -68,7 +68,7 @@ class ArticleListModelTest {
     @DisplayName("GIVEN that two articles are present in the content under the home page, "
                    + "WHEN article list component model is adapted from the home page, "
                    + "THEN the model returns two articles with their corresponding title, description, URL and image.")
-    void testSurfingCategoryArticlePages() {
+    void testSurfingAndClimbingCategoryArticlePages() {
         final List<ArticleItem> articles = this.model.getArticles();
         final Optional<ArticleItem> surfingArticle = this.findArticleByTitle(articles, "Surfing");
         final Optional<ArticleItem> climbingArticle = this.findArticleByTitle(articles, "Climbing");

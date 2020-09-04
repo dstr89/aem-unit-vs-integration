@@ -6,6 +6,7 @@ This is an example AEM project demonstrating how to make use of JUnit, AEM Mocks
 Instead of writing separate unit tests for each class, in this approach we focus on testing the expected functionality gained from integrating those classes.
 We step away from the unit/code level testing and focus our test on what the end user is actually expecting as the output (acceptance criteria).
 
+The provided codebase was tested on AEM 6.5 service pack 6.5.5.
 The project was generated using AEM project archetype version 23. For archetype documentation refer to: 
     
     https://github.com/adobe/aem-project-archetype 
