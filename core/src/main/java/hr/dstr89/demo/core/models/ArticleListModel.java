@@ -2,7 +2,6 @@ package hr.dstr89.demo.core.models;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import javax.annotation.PostConstruct;
 
